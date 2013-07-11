@@ -1,6 +1,7 @@
 = Sinatra::Environments
 
-A Sinatra Extension that sets up rails like environments
+A Sinatra Extension that sets up rails like environments base on Chad W Pry's
+work on https://github.com/chadwpry/sinatra-initializers
 
 == Installation
 
