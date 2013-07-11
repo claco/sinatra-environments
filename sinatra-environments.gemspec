@@ -4,14 +4,14 @@
 # -*- encoding: utf-8 -*-
 
 Gem::Specification.new do |s|
-  s.name = %q{sinatra-initializers}
-  s.version = "0.1.4"
+  s.name = %q{sinatra-environments}
+  s.version = "0.0.1"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
-  s.authors = ["Chad W Pry"]
-  s.date = %q{2011-09-29}
-  s.description = %q{Rails like initialization}
-  s.email = %q{chad.pry@gmail.com}
+  s.authors = ["Christopher H. Laco", "Chad W Pry"]
+  s.date = %q{2013-07-11}
+  s.description = %q{Rails like environments}
+  s.email = %q{claco@chrislaco.com}
   s.extra_rdoc_files = [
     "LICENSE",
      "README.rdoc"
@@ -23,18 +23,18 @@ Gem::Specification.new do |s|
      "LICENSE",
      "README.rdoc",
      "VERSION",
-     "lib/sinatra-initializers.rb",
-     "lib/sinatra-initializers/version.rb",
-     "sinatra-initializers.gemspec",
+     "lib/sinatra-environments.rb",
+     "lib/sinatra-environments/version.rb",
+     "sinatra-environments.gemspec",
      "Gemfile",
      "Rakefile"
   ]
   s.test_files = `git ls-files -- {test,spec,features}/*`.split("\n")
-  s.homepage = %q{http://github.com/chadwpry/sinatra-initializers}
+  s.homepage = %q{http://github.com/claco/sinatra-environments}
   s.rdoc_options = ["--charset=UTF-8"]
   s.require_paths = ["lib"]
   s.rubygems_version = %q{1.3.7}
-  s.summary = %q{A Sinatra Extension that follows a pattern of rails initializers}
+  s.summary = %q{A Sinatra Extension that follows a pattern of rails environments}
   
   s.add_development_dependency('sinatra')
   s.add_development_dependency('rake')

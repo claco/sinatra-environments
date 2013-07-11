@@ -1,10 +1,10 @@
-= Sinatra::Initializers
+= Sinatra::Environments
 
-A Sinatra Extension that sets up rails like initializers
+A Sinatra Extension that sets up rails like environments
 
 == Installation
 
-  $  gem install sinatra-initializers
+  $  gem install sinatra-environments
 
 == Dependencies
 
@@ -25,11 +25,11 @@ This Gem depends upon the following:
 To view the settings in your app, just require and register the extension 
 in your sub-classed Sinatra app:
   
-  require 'sinatra-initializers'
+  require 'sinatra-environments'
   
   class YourApp < Sinatra::Base
     
-    register Sinatra::Initializers
+    register Sinatra::Environments
     
   end
 
@@ -38,21 +38,20 @@ In your "classic" Sinatra app, you just require the extension like this:
 
   require 'rubygems'
   require 'sinatra'
-  require 'sinatra-initializers'
+  require 'sinatra-environments'
   
 
 == Configuration Options
 
 The configuration directory may be defined by setting
 the "config_directory" app variable.  Unless it is setup
-it will default to "config/initializers"
+it will default to "config/environments"
 
-Add initializer scripts in config/initializers.  Naming
-follows a strict pattern of number then name for order priority
+Add environment scripts in config/environments. If config/environment.rb exists,
+it will be loaded before any specific environment file.
 
-  00-first_initializer.rb
-  01-second_initializer.rb
-
+  config/environment.rb
+  config/environments/development.rb
 
 == More detail needed?
 
@@ -62,7 +61,7 @@ Contact me via email!
 == Errors / Bugs
 
 If something is not behaving intuitively, it is a bug, and should be reported.
-Report it here: http://github.com/chadwpry/sinatra-initializers/issues 
+Report it here: http://github.com/claco/sinatra-environments/issues 
 
 
 == TODOs
@@ -81,5 +80,6 @@ Report it here: http://github.com/chadwpry/sinatra-initializers/issues
 == Copyright
 
 Copyright (c) 2011 Chad W Pry. Released under the MIT License.
+Copyright (c) 2013 Christopher H. Laco. Released under the MIT License.
 
 See LICENSE for details.
