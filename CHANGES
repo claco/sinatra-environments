@@ -1,3 +1,8 @@
-rel 0.1.0 (2013-07-11)
+rel 0.0.2 (2013-07-11)
+
+* Fix accidental loading of all files in config/environments
+* Fix config directory attribute to avoid collision with Sinatra::Initializers
+
+rel 0.0.1 (2013-07-11)
 
 * intial release of gem / code

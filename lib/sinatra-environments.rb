@@ -1,28 +1,31 @@
-require 'sinatra/base'
-require 'sinatra-environments/version'
+require "sinatra/base"
+require "sinatra-environments/version"
 
 module Sinatra
   class Base
-    set(:config_directory, "config/environments")
+    set(:environments_config_directory, "config/environments")
   end
 
   module Environments
-    def config_directory= path
+    def environments_config_directory=(path)
       super
       register Sinatra::Environments
     end
 
-    def self.registered app
-      environment_file = File.join(app.config_directory, "../environment.rb")
+    def self.registered(app)
+      environment = app.settings.environment.to_s
+      config_dir = app.environments_config_directory
+      parent_dir = File.expand_path(File.join(config_dir, "../"))
+      environment_file = File.join(parent_dir, "environment.rb")
+      specific_file = File.expand_path(File.join(config_dir, "#{environment}.rb"))
 
       if File.exists?(environment_file)
-        require File.join(Dir.pwd, environment_file)
+        require environment_file
       end
 
-      Dir["#{app.config_directory}/**/*.rb"].each do |file_path|
-        require File.join(Dir.pwd, file_path)
+      if File.exists?(specific_file)
+        require specific_file
       end
     end
   end
 end
-

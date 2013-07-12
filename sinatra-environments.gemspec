@@ -5,7 +5,7 @@
 
 Gem::Specification.new do |s|
   s.name = %q{sinatra-environments}
-  s.version = "0.0.1"
+  s.version = "0.0.2"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Christopher H. Laco", "Chad W Pry"]
@@ -36,8 +36,8 @@ Gem::Specification.new do |s|
   s.rubygems_version = %q{1.3.7}
   s.summary = %q{A Sinatra Extension that follows a pattern of rails environments}
   
-  s.add_development_dependency('sinatra')
-  s.add_development_dependency('rake')
-  s.add_development_dependency('rspec')
+  s.add_development_dependency("sinatra")
+  s.add_development_dependency("rake")
+  s.add_development_dependency("rspec")
 end
 

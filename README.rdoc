@@ -26,7 +26,7 @@ This Gem depends upon the following:
 To view the settings in your app, just require and register the extension 
 in your sub-classed Sinatra app:
   
-  require 'sinatra-environments'
+  require "sinatra-environments"
   
   class YourApp < Sinatra::Base
     
@@ -37,9 +37,9 @@ in your sub-classed Sinatra app:
 
 In your "classic" Sinatra app, you just require the extension like this:
 
-  require 'rubygems'
-  require 'sinatra'
-  require 'sinatra-environments'
+  require "rubygems"
+  require "sinatra"
+  require "sinatra-environments"
   
 
 == Configuration Options
